@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\PackageController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\PackageController;
 use Symfony\Component\Routing\Route as RoutingRoute;
 
 /*
@@ -21,3 +22,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::resource('packages', PackageController::class);
+Route::apiResource('users', UserController::class);
